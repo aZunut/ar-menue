@@ -10,14 +10,17 @@
     </head>
     <body>
     <a-scene environment info-message="htmlSrc: #messageText">
-        <a-box id="food"></a-box>
-        <a-box id="drink"></a-box>
-        <a-entity id="menue">
-            <a-box id="menue-1"></a-box>
-            <a-box id="menue-2"></a-box>
-            <a-box id="menue-3"></a-box>
-            <a-box id="menue-4"></a-box>
+        <a-box id="menue"></a-box>
+        <a-entity id="classes" button="label: food; toggleable: true"></a-entity>
+        <!-- <a-entity id="drink" button="label: drink"></a-entity> -->
+        <a-entity id="all-menue">
+            <a-entity id="menue-1" button="label: menue-1"></a-entity>
+            <a-entity id="menue-2" button="label: menue-2"></a-entity>
+            <a-entity id="menue-3" button="label: menue-3"></a-entity>
+            <a-entity id="menue-4" button="label: menue-4"></a-entity>
         </a-entity>
+        <a-entity hand-tracking-controls="hand: left"></a-entity>
+        <a-entity hand-tracking-controls="hand: right"></a-entity>
     </a-scene>
     </body>
 </html>
