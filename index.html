@@ -10,19 +10,26 @@
     </head>
     <body>
     <a-scene xr-mode-ui="XRMode: xr" environment info-message="htmlSrc: #messageText">
-        <a-box id="menue" position="0 0 -0.1" scale="0.15 0.1 0.01" color="black" event-mnage>
-            <a-entity id="darkModeButton" button="label: food; toggleable: true" position="0 0.4 1"></a-entity>
-            <!-- <a-entity id="drink" button="label: drink"></a-entity> -->
-            <a-entity id="menue-1" button="label: menue-1; width: 0.2" position="-0.3 0.2 1"></a-entity>
-            <a-entity id="menue-2" button="label: menue-2; width: 0.2" position="0.3 0.2 1"></a-entity>
-            <a-entity id="menue-3" button="label: menue-3; width: 0.2" position="-0.3 -0.1 1"></a-entity>
-            <a-entity id="menue-4" button="label: menue-4; width: 0.2" position="0.3 -0.1 1"></a-entity>
-        </a-box>
-        <a-box id="b1" color="red" visible="false"></a-box>
-        <a-box id="b2" color="blue" visible="false"></a-box>
-        <a-box id="b3" color="green" visible="false"></a-box>
-        <a-box id="b4" color="yellow" visible="false"></a-box>
+        <a-entity id="player-rig" look-controls>
+            <a-camera position="0 1.6 0">
+            <!-- <a-camera scale="1 1 1" raycaster="objects: .clickable; showLine: true; line.color: red; lineOpacity: 1.0 line.length: 10; direction: 0 0 -1"> -->
+                <!-- <a-cursor></a-cursor>  -->
+            </a-camera>
+        </a-entity>
         <a-entity hand-tracking-controls="hand: left"></a-entity>
+            <a-box id="menue" position="0 0 -0.1" scale="0.15 0.1 0.01" color="black" look-at="[player-rig]" event-mnage>
+                <a-entity id="darkModeButton" button="label: food; toggleable: true" position="0 0.4 1"></a-entity>
+                <!-- <a-entity id="drink" button="label: drink"></a-entity> -->
+                <a-entity id="menue-1" button="label: menue-1; width: 0.2" position="-0.3 0.2 1"></a-entity>
+                <a-entity id="menue-2" button="label: menue-2; width: 0.2" position="0.3 0.2 1"></a-entity>
+                <a-entity id="menue-3" button="label: menue-3; width: 0.2" position="-0.3 -0.1 1"></a-entity>
+                <a-entity id="menue-4" button="label: menue-4; width: 0.2" position="0.3 -0.1 1"></a-entity>
+            </a-box>
+            <a-box id="b1" color="red" visible="false"></a-box>
+            <a-box id="b2" color="blue" visible="false"></a-box>
+            <a-box id="b3" color="green" visible="false"></a-box>
+            <a-box id="b4" color="yellow" visible="false"></a-box>
+        </a-entity>
         <a-entity hand-tracking-controls="hand: right"></a-entity>
     </a-scene>
     </body>
