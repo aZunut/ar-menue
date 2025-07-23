@@ -1,10 +1,10 @@
 AFRAME.registerComponent('event-mnage', {init: function () {
     this.bindMethods();
 
-    this.id1GeometryEl = document.querySelector('#1');
-    this.id2GeometryEl = document.querySelector('#2');
-    this.id3GeometryEl = document.querySelector('#3');
-    this.id4GeometryEl = document.querySelector('#4');
+    this.id1GeometryEl = document.querySelector('#b1');
+    this.id2GeometryEl = document.querySelector('#b2');
+    this.id3GeometryEl = document.querySelector('#b3');
+    this.id4GeometryEl = document.querySelector('#b4');
 
     this.id1ButtonEl = document.querySelector('#menue-1');
     this.id2ButtonEl = document.querySelector('#menue-2');
